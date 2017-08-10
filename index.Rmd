@@ -1,0 +1,17 @@
+--- 
+title: "Determination of Scoring Thresholds"
+author: "Dr. Clifton Franklund"
+date: "August 2017"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: weebeasties/Thresholds
+url: 'http\://weebeasties.github.io/Thresholds/'
+description: "Setting scoring thresholds for the revised General Education program at Ferris State University."
+---
+
+# Preface {-}
+
+This is the very first part of the book.
