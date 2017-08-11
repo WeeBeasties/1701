@@ -1,6 +1,6 @@
 [
 ["index.html", "General Education Thresholds1 Abstract", " General Education Thresholds1 Standardizing the criteria of success Dr. Clifton Franklund General Education Coordinator Fall 2017 Abstract “Assessment is not a spreadsheet; it’s a conversation.” — Irmeli Halinen This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. Report number 201701, DOI 10.17605/OSF.IO/35GSR↩ "],
-["introduction.html", "Introduction", " Introduction "],
-["methods.html", "Methods", " Methods "],
-["results.html", "Results and Discussion", " Results and Discussion "]
+["introduction.html", "Introduction Standardized scoring VALUE rubrics for individuals Need thresholds for courses", " Introduction Standardized scoring VALUE rubrics for individuals Need thresholds for courses "],
+["methods.html", "Methods Create proportional distributions Generating samples Analysis", " Methods Create proportional distributions Generating samples Analysis "],
+["results.html", "Results and Discussion Summary statistics Histograms Color scheme", " Results and Discussion Summary statistics Histograms Color scheme "]
 ]

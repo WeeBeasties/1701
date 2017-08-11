@@ -31,8 +31,17 @@ biblio-style: apalike
 This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. 
 
 # Introduction {#introduction -}
+## Standardized scoring {#standards -} 
+## VALUE rubrics for individuals {#VALIE -}
+## Need thresholds for courses {#thresholds -}
 
 # Methods {#methods -}
+## Create proportional distributions {#distributions -}  
+## Generating samples {#samples -}
+## Analysis {#analysis -}
 
 # Results and Discussion {#results -}
+## Summary statistics {#summary -}
+## Histograms  {#histogram -}
+## Color scheme  {#colors -}
 
