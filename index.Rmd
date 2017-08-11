@@ -84,7 +84,7 @@ distribution4 <- function(scores) {
 > "Assessment is not a spreadsheet; it's a conversation."
 > --- Irmeli Halinen
 
-This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque tortor ac turpis congue venenatis. Curabitur congue justo est, non feugiat massa euismod sit amet. Fusce tincidunt, sapien in malesuada tempus, sem mi interdum turpis, in finibus sem nisl sed ex. Mauris in tristique nisl. Nunc pellentesque metus et velit aliquam, eu rhoncus diam condimentum. Quisque nec libero at odio tempor aliquam. Fusce at lacus porttitor, lobortis nisl nec, commodo tellus. Phasellus interdum sapien varius ipsum consectetur tincidunt. Aenean posuere turpis at efficitur lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque tortor ac turpis congue venenatis. Curabitur congue justo est, non feugiat massa euismod sit amet. Fusce tincidunt, sapien in malesuada tempus, sem mi interdum turpis, in finibus sem nisl sed ex. Mauris in tristique nisl. Nunc pellentesque metus et velit aliquam, eu rhoncus diam condimentum. Quisque nec libero at odio tempor aliquam. Fusce at lacus porttitor, lobortis nisl nec, commodo tellus. Phasellus interdum sapien varius ipsum consectetur tincidunt. Aenean posuere turpis at efficitur lobortis. 
 
 # Introduction {#introduction -}
 ## Standardized scoring {#standards -} 
@@ -93,6 +93,7 @@ This report is a proof-of-concept for the proposed General Education assessment 
 
 # Methods {#methods -}
 ## Create proportional distributions {#distributions -}  
+
 ```{R distributions, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 
 #----------------------------------------------------------------------------------------
@@ -155,14 +156,14 @@ plot4 <- hist(as.numeric(myScores4))
 # Results and Discussion {#results -}
 ## Summary statistics {#summary -}
 ## Histograms  {#histogram -}
-```{R histogram, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7}
+```{R histogram, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.cap="Score distributions from the simulated data"}
 
 #----------------------------------------------------------------------------------------
 #	CREATE HISTOGRAM FIGURE
 #----------------------------------------------------------------------------------------
 
 # Standard colors for the levels with 40% transparency (60% opacity) to visualize any overlap
-plot(plot0, xlim = c(0,4), xlab = "Mean Class Score", ylim = c(0,300), las = 1, main = "Predicted Score Distribution", col = "#29335c99")
+plot(plot0, xlim = c(0,4), xlab = "Mean Class Score", ylim = c(0,300), las = 1, main = "", col = "#29335c99")
 plot(plot1, xlim = c(0,4), ylim = c(0,300), col = "#e4572e99", add=T)
 plot(plot2, xlim = c(0,4), ylim = c(0,300), col = "#f3a71299", add=T)
 plot(plot3, xlim = c(0,4), ylim = c(0,300), col = "#a8c68699", add=T)
@@ -175,13 +176,38 @@ abline(v=2.6, lty=2)
 abline(v=3.4, lty=2)
 
 # Label regions
-text(0.5, 295, "Deficient\n   1%", cex=0.7)
-text(1.4, 295, "Beginning\n   5%", cex=0.7)
-text(2.2, 295, "Progressing\n 25%", cex=0.7)
-text(3.0, 295, "Proficient\n  60%", cex=0.7)
-text(3.7, 295, "Advanced\n   90%", cex=0.7)
+text(0.5, 298, "Deficient\n   1%", cex=0.7)
+text(1.4, 298, "Beginning\n   5%", cex=0.7)
+text(2.2, 298, "Progressing\n 25%", cex=0.7)
+text(3.0, 298, "Proficient\n  60%", cex=0.7)
+text(3.7, 298, "Advanced\n   90%", cex=0.7)
 
 ```
 
 ## Color scheme  {#colors -}
 
+```{R colors, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7.5, fig.align="center"}
+
+#----------------------------------------------------------------------------------------
+#	CREATE COLOR SCHEME TABLE
+#----------------------------------------------------------------------------------------
+
+# Standard colors 
+myColors <- tibble("Level" = c("Deficient", "Beginning", "Progressing", "Proficient", "Advanced"),
+		"Score Range"   = c("[0.00 - 1.00)", "[1.00 - 1.80)", "[1.80 - 2.60)", "[2.60 - 3.40)", "[3.40 - 4.00]"),
+		"Color (HEX)"   = c("#29335c", "#e4572e", "#f3a712", "#a8c686", "#669bbc"))
+
+knitr::kable(myColors, caption="Color pallet for score interpretation", align=c("c","c","c"), booktabs=TRUE)
+
+```
+
+
+```{R scheme, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.cap="Color scheme", fig.align="center"}
+
+#----------------------------------------------------------------------------------------
+#	SHOW COLOR SCHEME
+#----------------------------------------------------------------------------------------
+
+knitr::include_graphics("art/colorScheme.png")
+
+```
