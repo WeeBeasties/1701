@@ -29,3 +29,10 @@ biblio-style: apalike
 > --- Irmeli Halinen
 
 This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. 
+
+# Introduction {#introduction -}
+
+# Methods {#methods -}
+
+# Results and Discussion {#results -}
+
