@@ -23,84 +23,9 @@ biblio-style: apalike
 \rhead{}
 \renewcommand{\headrulewidth}{0pt}
 
-```{R packages, echo=FALSE, message=FALSE, warning=FALSE}
-
-#----------------------------------------------------------------------------------------
-#	INSTALL PACKAGES
-#----------------------------------------------------------------------------------------
-
-packages<-function(x){
-        x<-as.character(match.call()[[2]])
-        if (!require(x,character.only=TRUE)){
-                install.packages(pkgs=x,repos="http://cran.r-project.org")
-                require(x,character.only=TRUE)
-        }
-}
-packages(pander)	# code layout
-packages(modeest)       # calculate mode
-packages(moments)       # calculate skew, kurtosis, etc.
-packages(weights)       # calculate weighted t-test
-packages(dplyr)         # handling tidy data neatly
-packages(ggplot2)       # make pretty pictures
-packages(forestplot)    # present meta-analysis
-```
-
-```{R functions, echo=FALSE, message=FALSE, warning=FALSE}
-
-#----------------------------------------------------------------------------------------
-#	DEFINE FUNCTIONS
-#----------------------------------------------------------------------------------------
-
-# Adds legends above figures (used for barplot)
-add_legend <- function(...) {
-  opar <- par(fig=c(0, 1, 0, 1), oma=c(0, 0, 0, 0),
-    mar=c(0, 0, 0, 0), new=TRUE)
-  on.exit(par(opar))
-  plot(0, 0, type='n', bty='n', xaxt='n', yaxt='n')
-  legend(...)
-}
-
-#  Computes the variance of a weighted mean following Cochran 1977 definition
-#  Code found online at:
-#  http://stats.stackexchange.com/questions/25895/computing-standard-error-in-weighted-mean-estimation
-weighted.var.se <- function(x, w, na.rm=FALSE)
-	{
-	if (na.rm) { w <- w[i <- !is.na(x)]; x <- x[i] }
-	n = length(w)
-	xWbar = weighted.mean(x,w,na.rm=na.rm)
-	wbar = mean(w)
-	out = sqrt(n/((n-1)*sum(w)^2)*(sum((w*x-wbar*xWbar)^2)-2*xWbar*sum((w-wbar)*(w*x-wbar*xWbar))+xWbar^2*sum((w-wbar)^2)))
-	low = xWbar-(out*1.96)
-	high = xWbar+(out*1.96)
-	myOutput <- c(mean=format(round(xWbar,2),nsmall=2),low=format(round(low,2),nsmall=2),high=format(round(high,2),nsmall=2))
-	return(myOutput)
-}
-
-# Computes omega squared (effect size) for an ANOVA analysis
-omega_sq <- function(aovm){
-    sum_stats <- summary(aovm)[[1]]
-    SSm <- sum_stats[["Sum Sq"]][1]
-    SSr <- sum_stats[["Sum Sq"]][2]
-    DFm <- sum_stats[["Df"]][1]
-    MSr <- sum_stats[["Mean Sq"]][2]
-    W2 <- (SSm-DFm*MSr)/(SSm+SSr+MSr)
-    return(W2)
-}
-
-```
-
-```{R data, echo=FALSE, message=FALSE, warning=FALSE}
-
-#----------------------------------------------------------------------------------------
-#	LOAD DATA
-#----------------------------------------------------------------------------------------
-
-myData <- read.csv("BIOL200Data.csv", row.names = NULL, stringsAsFactors = FALSE)
-
-```
 
 # Abstract {#abstract -}
 > "Assessment is not a spreadsheet; it's a conversation."
 > --- Irmeli Halinen
 
-This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. The clean and tidy data set was used to generate this report in both PDF and HTML formats with the bookdown package for the R statistical programming language. A total of `r max(myData$Order)` semesters of student performance on a lecture exam were used to evaluate student competency on Ferris Learning Outcome (FLO) SCI1. A meta-analysis of these data demonstrated that  performance was essentially at the criterion of success. There was substantial variation in enrollment and course performance over the time span examined The utility of reports like these to analyze, distribute, and act up General Education assessment data will be investigated using faculty focus groups in the fall of 2016.
+This report is a proof-of-concept for the proposed General Education assessment strategy at Ferris State University. Course-level student assessment data was gathered using TracDat and de-identified using a custom script. 

@@ -6,7 +6,7 @@ bookdown::gitbook:
     toc:
       collapse: subsection
       before: |
-        <li><a href="http://www.ferris.edu/HTMLS/academics/general-education/evidence/repository.htm" target="blank"><img src="./art/logo2.png" align="center" hspace="15" vspace="5"/></a></li>
+        <li><a href="http://www.ferris.edu/HTMLS/academics/general-education/evidence/repository.htm" target="blank"><img src="art/logo2.png" align="center" hspace="15" vspace="5"/></a></li>
       after: |
         <li><a href="https://bookdown.org/yihui/bookdown/" target="blank">Published with bookdown</a></li>
       edit: https://github.com/WeeBeasties/Thresholds/blob/master/%s
