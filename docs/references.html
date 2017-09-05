@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="introduction.html">
-<link rel="next" href="results.html">
+<link rel="prev" href="results.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -109,112 +109,30 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="methods" class="section level1 unnumbered">
-<h1>Methods</h1>
-<div id="data-provenance" class="section level2 unnumbered">
-<h2>Data provenance</h2>
-<p>Data provenance refers to a system that permits tracking of the origin, movement, modification, and utilization of data sets <span class="citation">(Buneman, Khanna, and Wang-Chiew <a href="references.html#ref-Buneman2001">2001</a>)</span>. The provenance of General Education data will be explicitly declared to facilitate the reproducibility and extensibility of these studies.</p>
-<div id="location-of-public-website-files" class="section level3 unnumbered">
-<h3>Location of public website files</h3>
-<p>All files related to this report can be found online at the Open Science Framework <span class="citation">(Nosek <a href="references.html#ref-Nosek2012">2012</a>)</span>. This site contains all of the files needed to reproduce this report from the de-identified data set. The site’s url is <a href="https://osf.io/t6u8m/" class="uri">https://osf.io/t6u8m/</a>.</p>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+
+<div id="refs" class="references">
+<div id="ref-Buneman2001">
+<p>Buneman, Peter, Sanjeev Khanna, and Tan Wang-Chiew. 2001. “Why and Where: A Characterization of Data Provenance.” In <em>Database Theory — Icdt 2001 8th Int. Conf. London, Uk, January 4–6, 2001 Proc.</em>, edited by Jan den Bussche and Victor Vianu, 316–30. Berlin, Heidelberg: Springer Berlin Heidelberg. doi:<a href="https://doi.org/10.1007/3-540-44503-X_20">10.1007/3-540-44503-X_20</a>.</p>
 </div>
-<div id="session-information" class="section level3 unnumbered">
-<h3>Session information</h3>
-<p>This report was written using RStudio <span class="citation">(RStudio Team <a href="references.html#ref-Rstudio">2015</a>)</span> and the R statistical programming language <span class="citation">(R Core Team <a href="references.html#ref-R">2013</a>)</span>. These products are free to download for PC, Macintosh, and Linux operating systems. The following information pertains to the session parameters used to generate this report. If you have trouble reproducing this report, it may be due to different session parameters. You may contact <a href="mailto:CliftonFranklund@ferris.edu">Dr. Franklund</a> if you need assistance.</p>
-<p><strong>R version 3.4.1 (2017-06-30)</strong></p>
-<p>**<a href="Platform:**" class="uri">Platform:**</a> x86_64-apple-darwin15.6.0 (64-bit)</p>
-<p><strong>locale:</strong> en_US.UTF-8||en_US.UTF-8||en_US.UTF-8||C||en_US.UTF-8||en_US.UTF-8</p>
-<p><strong>attached base packages:</strong> <em>stats</em>, <em>graphics</em>, <em>grDevices</em>, <em>utils</em>, <em>datasets</em>, <em>methods</em> and <em>base</em></p>
-<p><strong>other attached packages:</strong> <em>pander(v.0.6.1)</em>, <em>dplyr(v.0.7.2)</em>, <em>purrr(v.0.2.3)</em>, <em>readr(v.1.1.1)</em>, <em>tidyr(v.0.7.0)</em>, <em>tibble(v.1.3.4)</em>, <em>ggplot2(v.2.2.1)</em> and <em>tidyverse(v.1.1.1)</em></p>
-<p><strong>loaded via a namespace (and not attached):</strong> <em>Rcpp(v.0.12.12)</em>, <em>cellranger(v.1.1.0)</em>, <em>compiler(v.3.4.1)</em>, <em>plyr(v.1.8.4)</em>, <em>bindr(v.0.1)</em>, <em>forcats(v.0.2.0)</em>, <em>tools(v.3.4.1)</em>, <em>digest(v.0.6.12)</em>, <em>lubridate(v.1.6.0)</em>, <em>jsonlite(v.1.5)</em>, <em>evaluate(v.0.10.1)</em>, <em>nlme(v.3.1-131)</em>, <em>gtable(v.0.2.0)</em>, <em>lattice(v.0.20-35)</em>, <em>pkgconfig(v.2.0.1)</em>, <em>rlang(v.0.1.2)</em>, <em>psych(v.1.7.5)</em>, <em>rstudioapi(v.0.6)</em>, <em>yaml(v.2.1.14)</em>, <em>parallel(v.3.4.1)</em>, <em>haven(v.1.1.0)</em>, <em>bindrcpp(v.0.2)</em>, <em>xml2(v.1.1.1)</em>, <em>httr(v.1.3.1)</em>, <em>stringr(v.1.2.0)</em>, <em>knitr(v.1.17)</em>, <em>hms(v.0.3)</em>, <em>rprojroot(v.1.2)</em>, <em>grid(v.3.4.1)</em>, <em>glue(v.1.1.1)</em>, <em>R6(v.2.2.2)</em>, <em>readxl(v.1.0.0)</em>, <em>foreign(v.0.8-69)</em>, <em>rmarkdown(v.1.6)</em>, <em>bookdown(v.0.5)</em>, <em>modelr(v.0.1.1)</em>, <em>reshape2(v.1.4.2)</em>, <em>magrittr(v.1.5)</em>, <em>scales(v.0.5.0)</em>, <em>backports(v.1.1.0)</em>, <em>htmltools(v.0.3.6)</em>, <em>rvest(v.0.3.2)</em>, <em>assertthat(v.0.2.0)</em>, <em>mnormt(v.1.5-5)</em>, <em>colorspace(v.1.3-2)</em>, <em>stringi(v.1.1.5)</em>, <em>lazyeval(v.0.2.0)</em>, <em>munsell(v.0.4.3)</em> and <em>broom(v.0.4.2)</em></p>
+<div id="ref-Nosek2012">
+<p>Nosek, Brian. 2012. “An Open, Large-Scale, Collaborative Effort to Estimate the Reproducibility of Psychological Science.” <em>Perspect. Psychol. Sci.</em> 7 (6). SAGE Publications: 657–60. doi:<a href="https://doi.org/10.1177/1745691612462588">10.1177/1745691612462588</a>.</p>
 </div>
-<div id="processing-instructions" class="section level3 unnumbered">
-<h3>Processing instructions</h3>
-<p>This project produced a computationally reproducible assessment report (this document). Anyone wishing to recreate this report from the source document will need to install the following on their computer:</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://www.r-project.org">An installation of the R programming language</a></li>
-<li><a href="https://www.rstudio.com/products/rstudio/download3/">An installation of the RStudio IDE</a></li>
-<li><a href="https://www.latex-project.org/get/">An installation of LaTeX</a></li>
-</ol>
-<p>The necessary source files include the de-identified data set (BIOL200Data.csv), Rmarkdown code files (index.Rmd, 01-Introduction.Rmd, 02-Methods.Rmd, 03-Results.Rmd, 04-Discussion.Rmd, and 05-References.Rmd), bibtex reference file (references.bib), and custom art file in the /art folder.</p>
-<p>To process the files, you must first open the project in RStudio. Click on the “Build Book” button in the Build menu. Bookdown allows you to build this project as git_book (html site), pdf_book (via LaTeX), or epub_book (compatible with iBooks and other e-book readers).</p>
+<div id="ref-R">
+<p>R Core Team. 2013. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>.</p>
 </div>
-<div id="citation-of-this-work" class="section level3 unnumbered">
-<h3>Citation of this work</h3>
-<p>All of the de-identified data, analysis code, and documentation that constitute this report project may be freely used, modified, and shared. The de-identified data set, BIOL200Data.csv, is released under the Creative Commons <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 license</a>. All documentation, including README.md, Codebook.md, and this report, are released under the Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> licence. Any questions, comments, or suggestions may be sent to <a href="mailto:CliftonFranklund@ferris.edu">Dr. Franklund</a>.</p>
+<div id="ref-Rstudio">
+<p>RStudio Team. 2015. <em>RStudio: Integrated Development Environment for R</em>. Boston, MA: RStudio, Inc. <a href="http://www.rstudio.com/" class="uri">http://www.rstudio.com/</a>.</p>
 </div>
 </div>
-<div id="distributions" class="section level2 unnumbered">
-<h2>Create proportional distributions</h2>
-<table>
-<caption><span id="tab:distributions">Table 1: </span>Proportions for simulated data for classes of different abilities</caption>
-<thead>
-<tr class="header">
-<th align="left">Rubric</th>
-<th align="center">Level</th>
-<th align="center">Deficient Sim</th>
-<th align="center">Beginning Sim</th>
-<th align="center">Progressing Sim</th>
-<th align="center">Proficient Sim</th>
-<th align="center">Advanced Sim</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">0</td>
-<td align="center">Deficient</td>
-<td align="center">0.50</td>
-<td align="center">0.10</td>
-<td align="center">0.00</td>
-<td align="center">0.00</td>
-<td align="center">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
-<td align="center">Beginning</td>
-<td align="center">0.40</td>
-<td align="center">0.55</td>
-<td align="center">0.26</td>
-<td align="center">0.01</td>
-<td align="center">0.00</td>
-</tr>
-<tr class="odd">
-<td align="left">2</td>
-<td align="center">Progressing</td>
-<td align="center">0.09</td>
-<td align="center">0.30</td>
-<td align="center">0.49</td>
-<td align="center">0.39</td>
-<td align="center">0.10</td>
-</tr>
-<tr class="even">
-<td align="left">3</td>
-<td align="center">Proficient</td>
-<td align="center">0.01</td>
-<td align="center">0.50</td>
-<td align="center">0.24</td>
-<td align="center">0.46</td>
-<td align="center">0.27</td>
-</tr>
-<tr class="odd">
-<td align="left">4</td>
-<td align="center">Advanced</td>
-<td align="center">0.00</td>
-<td align="center">0.00</td>
-<td align="center">0.01</td>
-<td align="center">0.14</td>
-<td align="center">0.63</td>
-</tr>
-</tbody>
-</table>
 </div>
-<div id="simulations" class="section level2 unnumbered">
-<h2>Generating simulations</h2>
-</div>
-<div id="analysis" class="section level2 unnumbered">
-<h2>Analysis</h2>
-</div>
-</div>
+
+
+
+
+
+
 <div class="rules" style="font-size: 10pt;">
 	<table class="info">
 		<tr>
@@ -255,8 +173,8 @@ s.setAttribute('data-timestamp', +new Date());
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="results.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -285,7 +203,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/WeeBeasties/Thresholds/blob/master/index.Rmd",
+"link": "https://github.com/WeeBeasties/Thresholds/blob/master/01-References.Rmd",
 "text": "Edit"
 },
 "download": ["Thresholds.pdf"],

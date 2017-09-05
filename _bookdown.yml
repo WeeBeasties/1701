@@ -3,7 +3,7 @@ chapter_name: ""
 repo: https://github.com/WeeBeasties/Thresholds
 output_dir: docs
 rmd_files:
-  html: ["index.Rmd"]
+  html: ["index.Rmd","01-References.Rmd"]
   latex: ["index.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: no

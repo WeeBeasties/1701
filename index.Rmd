@@ -1,6 +1,6 @@
 --- 
-title: "General Education Thresholds^[Report number 201701, DOI [10.17605/OSF.IO/35GSR](https://doi.org/10.17605/OSF.IO/35GSR)]"
-subtitle: "Standardizing the criteria of success"
+title: "General Education Thresholds^[Report number 201701, DOI [10.17605/OSF.IO/6KFDV](https://doi.org/10.17605/OSF.IO/6KFDV)]"
+subtitle: "Standardizing the criteria of success for the revised General Education program"
 author: 
   - "Dr. Clifton Franklund"
   - "General Education Coordinator"
@@ -9,7 +9,7 @@ output:
   bookdown::gitbook:
     includes:
       after_body: disqus.html
-description: This report summarizes the student learning on Natural Sciences FLO SCI1 for a 200-level Biology course over a period of thirteen semesters.
+description: Using assessment data simulations to define performance thresholds for the General Education program at Ferris State University.
 documentclass: article
 github-repo: WeeBeasties/Thresholds
 link-citations: yes
@@ -26,18 +26,11 @@ biblio-style: apalike
 ```{R packages, echo=FALSE, message=FALSE, warning=FALSE}
 
 #----------------------------------------------------------------------------------------
-#	INSTALL PACKAGES
+#	LOAD PACKAGES
 #----------------------------------------------------------------------------------------
 
-packages<-function(x){
-        x<-as.character(match.call()[[2]])
-        if (!require(x,character.only=TRUE)){
-                install.packages(pkgs=x,repos="http://cran.r-project.org")
-                require(x,character.only=TRUE)
-        }
-}
-packages(tidyverse)	# tidy data science
-packages(xtable)        # make pretty tables of data
+library(tidyverse)	# tidy data science
+library(pander)         # used to report session settings
 ```
 
 ```{R functions, echo=FALSE, message=FALSE, warning=FALSE}
@@ -92,6 +85,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque 
 ## Need thresholds for courses {#thresholds -}
 
 # Methods {#methods -}
+
+## Data provenance {-}
+Data provenance refers to a system that permits tracking of the origin, movement, modification, and utilization of data sets [@Buneman2001]. The provenance of General Education data will be explicitly declared to facilitate the reproducibility and extensibility of these studies.
+
+### Location of public website files {-}
+All files related to this report can be found online at the Open Science Framework [@Nosek2012]. This site contains all of the files needed to reproduce this report from the de-identified data set. The site's url is [https://osf.io/t6u8m/](https://osf.io/t6u8m/).
+
+### Session information {-}
+This report was written using RStudio [@Rstudio] and the R statistical programming language [@R]. These products are free to download for PC, Macintosh, and Linux operating systems. The following information pertains to the session parameters used to generate this report. If you have trouble reproducing this report, it may be due to different session parameters. You may contact [Dr. Franklund](mailto:CliftonFranklund@ferris.edu) if you need assistance.
+
+```{R Session, echo=FALSE, comment=FALSE, error=FALSE, results='asis'}
+pander(sessionInfo())
+```
+
+### Processing instructions {-}
+This project produced a computationally reproducible assessment report (this document). Anyone wishing to recreate this report from the source document will need to install the following on their computer:
+
+1. [An installation of the R programming language](https://www.r-project.org)
+2. [An installation of the RStudio IDE](https://www.rstudio.com/products/rstudio/download3/)
+3. [An installation of LaTeX](https://www.latex-project.org/get/)
+
+The necessary source files include the de-identified data set (BIOL200Data.csv), Rmarkdown code files (index.Rmd, 01-Introduction.Rmd, 02-Methods.Rmd, 03-Results.Rmd, 04-Discussion.Rmd, and 05-References.Rmd), bibtex reference file (references.bib), and custom art file in the /art folder.
+
+To process the files, you must first open the project in RStudio. Click on the "Build Book" button in the Build menu. Bookdown allows you to build this project as git_book (html site), pdf_book (via LaTeX), or epub_book (compatible with iBooks and other e-book readers).
+
+### Citation of this work {-}
+All of the de-identified data, analysis code, and documentation that constitute this report project may be freely used, modified, and shared. The de-identified data set, BIOL200Data.csv, is released under the Creative Commons [CC0 license](https://creativecommons.org/publicdomain/zero/1.0/). All documentation, including README.md, Codebook.md, and this report, are released under the Creative Commons [CC-BY](https://creativecommons.org/licenses/by/4.0/) licence. Any questions, comments, or suggestions may be sent to [Dr. Franklund](mailto:CliftonFranklund@ferris.edu).
+
 ## Create proportional distributions {#distributions -}  
 
 ```{R distributions, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
