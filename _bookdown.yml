@@ -1,6 +1,6 @@
-book_filename: "Thresholds"
+book_filename: "Report-1701"
 chapter_name: ""
-repo: https://github.com/WeeBeasties/Thresholds
+repo: https://github.com/WeeBeasties/1701
 output_dir: docs
 rmd_files:
   html: ["index.Rmd","01-References.Rmd"]
@@ -8,4 +8,4 @@ rmd_files:
 clean: [packages.bib, bookdown.bbl]
 new_session: no
 comments: true
-edit: https://github.com/WeeBeasties/Thresholds/blob/master/%s
+edit: https://github.com/WeeBeasties/1701/blob/master/%s

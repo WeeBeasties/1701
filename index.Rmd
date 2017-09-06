@@ -1,5 +1,5 @@
 --- 
-title: "General Education Thresholds^[Report number 201701, DOI [10.17605/OSF.IO/6KFDV](https://doi.org/10.17605/OSF.IO/6KFDV)]"
+title: "General Education Thresholds^[Report number 1701, DOI [10.17605/OSF.IO/6KFDV](https://doi.org/10.17605/OSF.IO/6KFDV)]"
 subtitle: "Standardizing the criteria of success for the revised General Education program"
 author: 
   - "Dr. Clifton Franklund"
