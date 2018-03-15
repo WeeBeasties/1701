@@ -81,13 +81,23 @@ A standardized scoring system for General Education assessment has been develope
 
 # Introduction {#introduction -}  
 
+Assessing the efficacy of a General Education program is an ambitious endeavor. 
+
 ## Standardized scoring {#standards -}  
+
+
 
 ## Competency rubrics for individuals {#rubrics -}  
 
+
+
 ## Need thresholds for courses {#thresholds -}
 
+
+
 # Methods {#methods -}
+
+
 
 ## Data provenance {-}
 Data provenance refers to a system that permits tracking of the origin, movement, modification, and utilization of data sets [@Buneman2001]. The provenance of General Education data will be explicitly declared to facilitate the reproducibility and extensibility of these studies.
@@ -125,11 +135,11 @@ All of the de-identified data, analysis code, and documentation that constitute 
 #----------------------------------------------------------------------------------------
 dists <- tibble("Rubric" = c(0,1,2,3,4),
 		"Level" = c("Deficient", "Beginning", "Progressing", "Proficient", "Advanced"),
-		"Deficient Sim"   = c(0.50, 0.40, 0.09, 0.01, 0.00),
-		"Beginning Sim"   = c(0.10, 0.55, 0.30, 0.50, 0.00),
-		"Progressing Sim" = c(0.00, 0.26, 0.49, 0.24, 0.01),
-		"Proficient Sim"  = c(0.00, 0.01, 0.39, 0.46, 0.14),
-		"Advanced Sim"    = c(0.00, 0.00, 0.10, 0.27, 0.63))
+		"Distribution 0"   = c(0.50, 0.40, 0.09, 0.01, 0.00),
+		"Distribution 1"   = c(0.10, 0.55, 0.30, 0.05, 0.00),
+		"Distribution 2" = c(0.00, 0.26, 0.49, 0.24, 0.01),
+		"Distribution 3"  = c(0.00, 0.01, 0.39, 0.46, 0.14),
+		"Distribution 4"    = c(0.00, 0.00, 0.10, 0.27, 0.63))
 
 knitr::kable(dists, caption="Proportions for simulated data for classes of different abilities", align=c("l","c","c","c","c","c","c"), booktabs=TRUE)
 
@@ -178,7 +188,13 @@ plot4 <- hist(as.numeric(myScores4))
 ```
 
 # Results and Discussion {#results -}
+
 ## Summary statistics {#summary -}
+
+```{block, type='question'}
+Do you think that there are too many exams in this mix? What is the desired balance between exams, products, and performances for General Education?
+```
+
 ## Histograms  {#histogram -}
 ```{R histogram, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.cap="Score distributions from the simulated data"}
 
